@@ -20,8 +20,8 @@ CC = g++ -std=c++11 -Wno-deprecated-declarations -Wno-header-guard -Wno-deprecat
 OPTS = -O3
 CXXFLAGS+=-Wall -W -DNDEBUG $(OPTS)
 
-CPPINCL+=-I./seqan/include
-CPPINCL+=-I./seqan/extras/include
+CPPINCL+=-I../seqan/include
+CPPINCL+=-I../seqan/extras/include
 
 ###########################################################
 # RAIDER
