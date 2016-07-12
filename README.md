@@ -15,18 +15,31 @@ RAIDER: Rapid Ab Initio Detection of Elementary Repeats
 * De novo tool for finding elementary repeats with the intent of identifying
   transposible elements
 * Citation: Figueroa, N., Liu, X., Wang, J., & Karro, J. (2013). RAIDER: Rapid Ab Initio Detection of Elementary Repeats.
-  In Advances in Bioinformatics and Computational Biology (Vol. 8213, pp. 170–180). Cham: Springer International Publishing.
+  In Advances in Bioinformatics and Computational Biology (Vol. 8213, pp. 170â€“180). Cham: Springer International Publishing.
   http://doi.org/10.1007/978-3-319-02624-4_16
 
 Compiling instructions:
 * OS: Tested under OS 10 various flavors of Linux
 * Compiler: Tested using g++ 4.82
 * Required Libraries: SeqAn (provided)
-  Andreas Döring, David Weese, Tobias Rausch and Knut Reinert. SeqAn an efficient, generic C++ library for sequence analysis. BMC Bioinformatics, 9:11, 2008.
+  Andreas DÃ¶ring, David Weese, Tobias Rausch and Knut Reinert. SeqAn an efficient, generic C++ library for sequence analysis. BMC Bioinformatics, 9:11, 2008.
 * To compile: "make phRAIDER" or "make RAIDER"
 
 Running:
-* Run ./phRAIDER -h for help menu
+* ./phRAIDER <opts> <source file> <output dir>
+
+Source file: Fasta file containing the sequence(s) to be searched.
+
+Output dir: Will contain multiple files after run. The <output dir>/elements file will contain the list of all identified elementary repeats.
+
+Opts:
+* -q: Surpress output messages.
+* -p: Prescan mode.  Uses less memory at the cost of some runtime.  (Does not change results.)
+* -c <num>: Minimum number of instances required to be labeled a repeat.
+* -mf <file name>: Produce a masked version of the input sequence to the specified fasta file name.
+* -ff <gff file>: filter file.  Takes a gff file designated gene locations; identified elements overlapping these genes will be disregarde.
+* -s <binary string>: PatternHunter style spaced seed.  Core of phRAIDER algorithm; still not well understood what makes a good seed. Length of seed dictates the minimum possible length of a repeat element.
+
 
 ################################
 # Licensing information
