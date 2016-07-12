@@ -40,6 +40,8 @@ Opts:
 * -ff <gff file>: filter file.  Takes a gff file designated gene locations; identified elements overlapping these genes will be disregarde.
 * -s <binary string>: PatternHunter style spaced seed.  Core of phRAIDER algorithm; still not well understood what makes a good seed. Length of seed dictates the minimum possible length of a repeat element.
 
+*Comment*: phRAIDER identifies *elementary repeats* -- the building blocks of repeat elements.  A new tool has been developed and is in testing that will assmble the elementary repeats into putative repeat elements. This is not yet offically released, but those interested should contact us about getting access.)
+
 
 ################################
 # Licensing information
